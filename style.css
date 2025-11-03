@@ -1,0 +1,399 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* CORES DA MARCA */
+:root {
+    --primary-color: #FFC300;
+    /* Amarelo Vibrante (Energia/Pães/Queijos) */
+    --secondary-color: #D60000;
+    /* Vermelho Escuro/Vinho (Apetite/Carne) */
+    --text-color: #333;
+    --light-bg: #FAF3E6;
+    /* Fundo Cremoso/Bege Claro (Cor de padaria/pão) */
+    --dark-bg: #222;
+    --accent-shadow: rgba(214, 0, 0, 0.3);
+    /* Sombra suave para destaque */
+    --white-bg: #FFFFFF;
+}
+
+/* GERAL */
+body {
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+    /* Fundo Cremoso/Padaria */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.section {
+    padding: 80px 0;
+    /* Mais respiro */
+    text-align: center;
+}
+
+.section:nth-child(even) {
+    /* Alterna com o branco */
+    background-color: var(--white-bg);
+}
+
+h1,
+h2,
+h3 {
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+/* BOTÕES REFINADOS */
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    margin-top: 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1em;
+}
+
+.btn i {
+    margin-right: 8px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #FFDA5C;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px var(--accent-shadow);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #A00000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+
+/* 1. HERO SECTION */
+.hero-section {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #a80000 100%);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    border-bottom: 8px solid var(--primary-color);
+}
+
+.hero-section h1 {
+    font-size: 4em;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+.logo {
+    max-width: 180px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 2. SEÇÃO DE PRODUTOS (MAIS DETALHADA) */
+.grid-3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.product-item {
+    flex: 1 1 300px;
+    background-color: var(--white-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+}
+
+.product-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px var(--accent-shadow);
+}
+
+.product-item img {
+    width: 100%;
+    height: 220px;
+    /* Mais espaço para imagens */
+    object-fit: cover;
+    display: block;
+}
+
+.product-item h3 {
+    padding: 15px 20px 5px;
+    color: var(--text-color);
+    /* Títulos dos produtos em cor escura */
+}
+
+.product-item p {
+    padding: 0 20px 20px;
+    font-size: 0.95em;
+}
+
+/* NOVO: 2.5 SEÇÃO HISTÓRIA */
+.history-section {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 100px 0;
+    /* Padding generoso */
+}
+
+.history-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+.history-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+}
+
+.history-image-placeholder {
+    flex: 1 1 45%;
+    max-width: 45%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.history-image-placeholder img {
+    width: 100%;
+    height: 400px;
+    /* Imagem de destaque grande */
+    object-fit: cover;
+    display: block;
+}
+
+.history-text-card {
+    flex: 1 1 50%;
+    max-width: 50%;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Fundo semi-transparente */
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+    /* Borda de destaque */
+}
+
+.highlight-text {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.history-text-card p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+/* 3. CTA SECTION (DELIVERY) */
+.cta-section {
+    background-color: var(--primary-color);
+    padding: 60px 0;
+    color: var(--text-color);
+}
+
+.cta-section h2 {
+    color: var(--secondary-color);
+    font-size: 2.2em;
+}
+
+.cta-buttons p {
+    font-size: 1.2em;
+}
+
+/* 4. CONTATO E LOCALIZAÇÃO */
+.contact-section {
+    text-align: center;
+    background-color: var(--white-bg);
+}
+
+.map-container {
+    overflow: hidden;
+    padding-top: 56.25%;
+    /* Proporção 16:9, se quiser mudar a proporção do mapa */
+    position: relative;
+    height: 0;
+}
+
+.map-container iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.contact-info {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 30px;
+    border: 3px solid var(--primary-color);
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.map-placeholder {
+    margin-top: 25px;
+    height: 350px;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.map-placeholder iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* 5. RODAPÉ */
+footer {
+    background-color: var(--dark-bg);
+    color: #ccc;
+    padding: 30px 0;
+    font-size: 1em;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 992px) {
+    .history-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .history-image-placeholder,
+    .history-text-card {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 3em;
+    }
+
+    .hero-section {
+        padding: 60px 0;
+    }
+
+    .grid-3 {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .history-image-placeholder img {
+        height: 300px;
+    }
+
+    .section {
+        padding: 50px 0;
+    }
+}
+
+/* Container para alinhar os ícones */
+.social-icons-container {
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    padding: 20px 0;
+}
+
+/* Estilo Base para AMBOS os Ícones */
+.social-icon {
+    /* Aparência */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    /* Largura do círculo */
+    height: 50px;
+    /* Altura do círculo */
+    margin: 0 10px;
+    /* Espaçamento entre os ícones */
+    border-radius: 50%;
+    /* Transforma o elemento em um círculo */
+    text-decoration: none;
+    /* Remove sublinhado */
+
+    /* Ícone (Font Awesome) */
+    font-size: 24px;
+    /* Tamanho do ícone */
+    color: white;
+    /* Cor do ícone */
+
+    /* Animação */
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* --- ESTILOS ESPECÍFICOS POR REDE SOCIAL --- */
+
+/* Estilo WhatsApp */
+.social-icon.whatsapp {
+    background-color: #25D366;
+    /* Cor de fundo verde do WhatsApp */
+}
+
+.social-icon.whatsapp:hover {
+    background-color: #128C7E;
+    /* Verde mais escuro no hover */
+    transform: scale(1.1);
+    /* Ícone cresce um pouco */
+}
+
+/* Estilo Instagram */
+.social-icon.instagram {
+    /* Fundo com Gradiente (o visual do Instagram) */
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #ffb543 45%, #eb3941 60%, #bc2a8d 90%);
+}
+
+.social-icon.instagram:hover {
+    /* Efeito de zoom no hover */
+    transform: scale(1.1);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+}
